@@ -3,8 +3,8 @@ Codecamp 10
 2. Homework2
     ให้สร้าง web page ดังภาพจาก style ด้านล่าง
      - ห้ามแก้ไข style ที่ให้ + ห้ามใส่ style ใน tag
-     - ตรึง 5 กล่องเล็กตรงกลาง ไม่เลื่อนตาม scroll bar     
-     <style>
+     - ตรึง 5 กล่องเล็กตรงกลาง ไม่เลื่อนตาม scroll bar 
+     - ใช้ style ที่กำหนดมาให้เท่านั้นดังนี้        
         body{padding:0; margin:0; height:200vh;}
         .big{width:50%; height:50%;}
         .small{width:25%; height:25%;}
@@ -23,4 +23,4 @@ Codecamp 10
         .yellow{background-color: yellow;}
         .pink{background-color: deeppink;}
         .white{background-color: white;}
-    </style>
+    
