@@ -1,0 +1,56 @@
+<!-- 
+    Lab 1
+        1. สร้าง obj ชื่อ myComponent
+        2. มี 3 key เป็น one , two, three
+        3. value ของแต่ละ key ให้เขียนในรูปแบบ JSX
+        4. one ให้ค่าเป็น function ที่ Return JSX ที่ไม่มี props 
+        5. two ให้ค่าเป็น function ที่ Return JSX ที่มี props ชื่อ name แล้วใช้ชื่อเราลงไป
+        6. three ให้ค่าเป็น React.creteElement()
+        7. จากนั้นให้นำ ทุกๆ component ใน obj มาแสดงผลโดยใช้ dot Notation
+
+-->
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>Jsx lab 1</title>
+    <script src="https://unpkg.com/react@17.0.2/umd/react.development.js"></script>
+    <script src="https://unpkg.com/react-dom@17.0.2/umd/react-dom.development.js"></script>
+
+    <!-- Don't use this in production: -->
+    <script src="https://unpkg.com/babel-standalone@6.26.0/babel.min.js"></script>
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="text/babel">
+        const rootElement = document.getElementById("root")
+        const myComponent = {
+            one() {
+                return <h1>Object one</h1>
+            },
+            two(props) {
+                return <h1>Object {props.name}</h1>
+            },
+            three() {
+                return React.createElement(
+                    "h1",
+                    {
+                        stlye: {color: 'red'}
+                    },
+                    "Object 3"
+                )
+            }
+        }
+        const element = <div className = "container">
+                <myComponent.one />
+                <myComponent.two  name = "pakhinai" />
+                <myComponent.three />
+            </div>
+        
+        ReactDOM.render(element,rootElement)
+
+    </script>
+
+  </body>
+</html>

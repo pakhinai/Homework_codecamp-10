@@ -1,0 +1,34 @@
+<!-- 
+    lab 1
+        1. ให้สร้าง ตัวแปร มาเก็บค่า array [“a”, “b”, “c”, “d”, “e”] 
+        2. นำ array มา map แล้ว แสดงผลเป็น list
+        3. ใน <li> </li> ไม่ต้องใส่ key
+        4. เปิด Console.log ใน browser สังเกตุ warning ที่เกิดขึ้น 
+ 
+-->
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>Jsx lab 3</title>
+    <script src="https://unpkg.com/react@17.0.2/umd/react.development.js"></script>
+    <script src="https://unpkg.com/react-dom@17.0.2/umd/react-dom.development.js"></script>
+
+    <!-- Don't use this in production: -->
+    <script src="https://unpkg.com/babel-standalone@6.26.0/babel.min.js"></script>
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="text/babel">
+        const rootElement = document.getElementById("root")
+        const arr = ['a','b','c','d','e']
+        const element = arr.map(
+            item => <li>{item}</li>
+        )
+        ReactDOM.render(element,rootElement)
+    </script>
+  </body>
+</html>
+
+<!-- เกิดbug เนื่องจากถ้ามีการเปลี่ยนแปลง component นั้น React บังคับให้มี key -->

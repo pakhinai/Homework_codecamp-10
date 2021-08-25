@@ -1,0 +1,1 @@
+SELECT DISTINCT sname,age FROM sailors;
